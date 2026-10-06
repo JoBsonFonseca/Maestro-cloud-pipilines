@@ -4,8 +4,8 @@ tags:
 ---
 - launchApp
 
-- runflow:
-file: ./subflows/login.yaml
-env:
-  EMAIL: teste@teste.com
-  PASSWORD: "123456"
+- runFlow:
+    file: ./subflows/login.yaml
+    env:
+      EMAIL: teste@teste.com
+      PASSWORD: "123456"
