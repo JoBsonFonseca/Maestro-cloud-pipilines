@@ -2,9 +2,9 @@ name: Maestro Cloud Tests
 
 on:
   push:
-    branches: [master]
-    pull_request:
-        branches: [master]
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -12,14 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Run tests on Maestro Cloud
         uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
-          project-id: ${{secrets.MAESTRO_PROJECT_ID }}
+          project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
           app-file: qazandofood.apk
           workspace: flows
-          incluide-tags: smoke
+          include-tags: smoke
