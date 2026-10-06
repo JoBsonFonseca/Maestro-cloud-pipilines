@@ -20,6 +20,6 @@ jobs:
         with:
           api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
           project-id: ${{ secrets.MAESTRO_PROJECT_ID }}
-          app-file: qazandofood.apk
+          app-file: ANDROID - COMPLETO - app-release (3).apk
           workspace: flows
           include-tags: smoke

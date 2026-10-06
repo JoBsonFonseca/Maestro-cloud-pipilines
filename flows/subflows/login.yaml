@@ -1,0 +1,12 @@
+appId: com.qazandoqafood
+---
+- tapOn: "Don't Show Again"
+
+- tapOn: "E-mail"
+- inputText: ${EMAIL}
+- tapOn: "Senha"
+- inputText: ${PASSWORD}
+- hideKeyboard
+- tapOn: "login-button"
+- assertVisible:
+    point: 6%,23%
