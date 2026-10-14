@@ -1,0 +1,18 @@
+
+appId: com.qazandoqafood
+tags:
+  - smoke
+---
+- launchApp
+
+- runFlow:
+    file: ./subflows/login.yaml
+    env:
+      EMAIL: teste@teste.com
+      PASSWORD: "123456"
+
+- runFlow: selecionar_restaurante.yaml
+
+- runFlow: adicionar_pedido.yaml
+
+- runFlow: finalizar_pedido.yaml

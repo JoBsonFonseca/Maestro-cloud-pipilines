@@ -1,0 +1,13 @@
+appId: com.qazandoqafood
+---
+- tapOn:
+    id: "confirm-order-button"
+- scroll:
+    direction: DOWN
+- tapOn:
+    text: "Dinheiro"
+- tapOn:
+    text: "FAZER PEDIDO"
+- assertVisible:
+    text: "Pedido realizado"
+    label: "Verificar se o texto 'Pedido Realizado' está sendo apresentado"
